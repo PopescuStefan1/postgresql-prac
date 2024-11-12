@@ -1,12 +1,10 @@
 import pkg from "pg";
 const { Pool } = pkg;
 
-// All of the following properties should be read from environment variables
-// We're hardcoding them here for simplicity
 export default new Pool({
-  host: "localhost", // or wherever the db is hosted
-  user: "stefan",
+  host: process.env.DB_HOST,
+  user: process.env.USERNAME,
   database: "top_users",
-  password: "password",
+  password: process.env.PASSWORD,
   port: 5432, // The default port
 });

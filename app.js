@@ -1,4 +1,5 @@
 import express, { urlencoded } from "express";
+import "dotenv/config";
 const app = express();
 import indexRouter from "./routes/indexRouter.js";
 
